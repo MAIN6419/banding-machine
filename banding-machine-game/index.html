@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>밴딩 머신</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>
+          <img class="logo" src="./img/logo.svg" alt="밴딩머신" />
+        </h1>
+        <h2 class="stage">
+          Stage
+          <span class="stage-num">1</span>
+        </h2>
+      </header>
+      <nav class="game-nav">
+        <button class="audio-btn">🔊</button>
+        <button class="gameRule-btn">🎮️ 게임 방법</button>
+        <button class="ranking-btn">🏆 랭킹</button>
+        <button class="resetGame-btn">🏁 다시하기</button>
+        <button class="nextstage-btn">🚩 다음 스테이지</button>
+      </nav>
+      <main>
+        <section class="flex-container">
+          <h2 class="a11y">자판기</h2>
+          <article class="money-wrapper">
+            <h2 class="a11y">소지금</h2>
+            <div class="money-box">
+              💰 자금 :
+              <div>
+                <span class="money"></span>
+                <span class="measure">원</span>
+              </div>
+            </div>
+          </article>
+          <article class="article-menu"></article>
+          <div class="orderList-box">
+            <h2 class="orderList-title">📥 주문 목록</h2>
+            <article class="orderList">
+              <h2 class="a11y">주문할 콜라</h2>
+              <!-- order-cola-List -->
+            </article>
+            <div class="total-priceBox">
+              구매 금액 :
+              <span class="total-price">0</span>
+              <span class="measure">원</span>
+            </div>
+            <button class="buy-btn" type="button">구매</button>
+          </div>
+        </section>
+
+        <section class="flex-container2">
+          <h2 class="a11y">인벤토리 및 상점</h2>
+          <article class="inventory-box">
+            <h2 class="inventory-title">💼 인벤토리</h2>
+            <div class="inventory">
+              <!-- buy-cola-List -->
+            </div>
+            <div class="total-marketPriceBox">
+              총 보유 시가 : <span class="total-marketPrice">0</span>
+              <span>원</span>
+            </div>
+          </article>
+          <article class="sellList-box">
+            <h2 class="sellList-title">📤 판매 목록</h2>
+            <span class="sellList-caution">⚠️판매가는 시가의 절반</span>
+            <div class="sellList"></div>
+            <div class="total-priceBox">
+              판매 금액 :
+              <span class="total-price">0</span>
+              <span class="measure">원</span>
+            </div>
+            <button class="sell-btn" type="button">판매</button>
+          </article>
+        </section>
+      </main>
+    </div>
+    <div class="modal">
+      <div class="game-rule">
+        <span class="modalClose-btn">X</span>
+        🎮 게임설명 <br>
+        <p>
+          1. 🚩 총 10 스테이지로 나누어져있습니다. <br>
+          2. 💰 스테이지가 바뀔 때 마다 음료의 가격이 랜덤으로 바뀌게 됩니다. <br>
+          3. 다음 스테이지 버튼을 누르면 다음 스테이지로 넘어갈 수 있습니다. <br>
+          4. 마지막 10 스테이지에 도달 시게임종료 되고, 현재 최종 보유 자금을 기록할 수 있습니다. <br>
+          5. 최종 자금은 보유 자금에 현재 인벤토리에 보유중인 음료의 가격으로 측정됩니다. <br>
+        </p> <br>
+        <p>
+          - 🎈 게임 방법 - <br>
+          1. 음료를 누르면 음료가 주문 목록에 추가됩니다.<br>
+          2. 주문목록 수량을 변경하려면 해당 음료의 수량 입력창에 수량을 입력하면됩니다. <br>
+          3. 주문목록에 추가된 음료를 구매버튼을 눌러 구매할 수 있습니다.<br>
+          4. 인벤토리는 구매한 음료가 담기는 공간입니다. 음료를 팔고 싶을 때 인벤토리 음료를 클릭하면 <br> 
+          5. 해당 음료가 판매 목록에 추가됩니다. <br>
+          6. 판매 목록에 추가된음료를 클릭하면 음료를 판매할 수 있습니다. <br>
+          ⚠️ 주의! 판매가는 현재 시가의 절반 금액입니다.
+        </p> 
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
